@@ -16,6 +16,7 @@ Route::group([
 ], function () {
     Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
     Route::post('password/reset', 'Auth\ResetPasswordController@reset');
+    Route::get('r/{slug}', 'RedirectController@redirect');
 });
 
 // It's necessary for the reset password e-mail
